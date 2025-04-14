@@ -1,13 +1,15 @@
 // Initialize chart with sample data
+let chart; // global chart variable
+
 function initChart() {
     const ctx = document.getElementById('priceChart').getContext('2d');
-    const chart = new Chart(ctx, {
+    chart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: ['Jan 1', 'Jan 15', 'Feb 1', 'Feb 15', 'Mar 15'],
             datasets: [{
                 label: 'Price History (₹)',
-                data: [1299, 1199, 1099, 999, 899],
+                data: [12999, 11999, 10999, 10599, 12599],
                 borderColor: '#FFA500',
                 backgroundColor: 'rgba(255, 165, 0, 0.1)',
                 tension: 0.1,
@@ -46,7 +48,6 @@ function initChart() {
     });
 }
 
-// Form submission handler
 document.getElementById('track-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const urlInput = this.querySelector('input');
@@ -58,11 +59,22 @@ document.getElementById('track-form').addEventListener('submit', function(e) {
     document.querySelector('.product-name').textContent = 'Sample Product';
     document.querySelector('.product-price').textContent = '₹899';
     document.querySelector('.product-source').textContent = 'Source: Amazon';
-    document.querySelector('.product-image').src = 'https://via.placeholder.com/150';
+    document.querySelector('.product-image').src = 'https://m.media-amazon.com/images/I/71xc4OlTkaL._SY450_.jpg';
+
+    // Show the product and chart sections
+    document.querySelector('.product-section').style.display = 'block';
+    document.querySelector('.chart-section').style.display = 'block';
+
+    // Initialize or update the chart
+    if (!chart) {
+        initChart();
+    } else {
+        chart.update();
+    }
     
     // Show success message
     alert('Product tracking initiated! Showing sample data.');
 });
 
-// Initialize the chart when page loads
-window.addEventListener('DOMContentLoaded', initChart);
+// Remove chart initialization on page load
+// window.addEventListener('DOMContentLoaded', initChart);
