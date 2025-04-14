@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceTale - Every price has a story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PriceTale</h1>
+        <p class="tagline">Every price has a story</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <form id="track-form">
+                <input type="url" placeholder="Paste your product link here..." required>
+                <button type="submit">Track</button>
+            </form>
+        </section>
+
+        <section class="product-section">
+            <div class="product-card">
+                <img src="" alt="Product image" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Product Name</h2>
+                    <p class="product-price">₹0.00</p>
+                    <p class="product-source">Source: Amazon/Myntra</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <canvas id="priceChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Dhruv • For Indian shoppers</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
