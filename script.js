@@ -9,7 +9,7 @@ function initChart() {
             labels: ['Jan 1', 'Jan 15', 'Feb 1', 'Feb 15', 'Mar 15'],
             datasets: [{
                 label: 'Price History (₹)',
-                data: [12999, 11999, 10999, 10599, 12599],
+                data: [15999, 12999, 10999, 11999, 10999],
                 borderColor: '#FFA500',
                 backgroundColor: 'rgba(255, 165, 0, 0.1)',
                 tension: 0.1,
@@ -57,7 +57,7 @@ document.getElementById('track-form').addEventListener('submit', function(e) {
     
     // For demo purposes, we'll show sample data
     document.querySelector('.product-name').textContent = 'Sample Product';
-    document.querySelector('.product-price').textContent = '₹899';
+    document.querySelector('.product-price').textContent = '₹10999';
     document.querySelector('.product-source').textContent = 'Source: Amazon';
     document.querySelector('.product-image').src = 'https://m.media-amazon.com/images/I/71xc4OlTkaL._SY450_.jpg';
 
