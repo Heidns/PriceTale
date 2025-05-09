@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PriceTale - Every price has a story</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -14,32 +14,100 @@
         <p class="tagline">Every price has a story</p>
     </header>
 
-    <main>
-        <section class="input-section">
-            <form id="track-form">
-                <input type="url" placeholder="Paste your product link here..." required>
-                <button type="submit">Track</button>
-            </form>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Track Prices Effortlessly</h2>
+            <p>Stay updated with the best deals and price drops on your favorite products.</p>
+            <button id="hero-cta">Start Tracking Now</button>
+        </div>
+    </section>
 
-        <section class="product-section">
-            <div class="product-card">
-                <img src="" alt="Product image" class="product-image">
-                <div class="product-info">
-                    <h2 class="product-name">Product Name</h2>
-                    <p class="product-price">₹0.00</p>
-                    <p class="product-source">Source: Amazon/Myntra</p>
+    <div class="content-wrapper">
+        <main>
+            <section class="input-section" style="display:none;">
+                <form id="track-form">
+                    <input type="url" placeholder="Paste your product link here..." required />
+                    <button type="submit">Track</button>
+                </form>
+            </section>
+
+            <section class="product-section">
+                <div class="product-card">
+                    <img src="" alt="Product image" class="product-image" />
+                    <div class="product-info">
+                        <h2 class="product-name">Product Name</h2>
+                        <p class="product-price">₹0.00</p>
+                        <p class="product-source">Source: Amazon/Myntra</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="chart-section">
-            <canvas id="priceChart"></canvas>
-        </section>
-    </main>
+            <section class="chart-section">
+                <canvas id="priceChart"></canvas>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2>Why Choose PriceTale?</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <img src="https://img.icons8.com/ios-filled/50/ffa500/price-tag.png" alt="Price Tracking Icon" />
+                        <h3>Real-time Price Tracking</h3>
+                        <p>Get instant updates on price changes for your favorite products.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://img.icons8.com/ios-filled/50/ffa500/graph.png" alt="Price History Icon" />
+                        <h3>Price History Charts</h3>
+                        <p>Visualize price trends over time to make informed buying decisions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://img.icons8.com/ios-filled/50/ffa500/appointment-reminders.png" alt="Notifications Icon" />
+                        <h3>Custom Alerts</h3>
+                        <p>Set personalized alerts to never miss a great deal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-list">
+                    <div class="testimonial-item">
+                        <p>"PriceTale helped me save so much money on my shopping! Highly recommend."</p>
+                        <h4>- Anjali K.</h4>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"The price history charts are super helpful to decide when to buy."</p>
+                        <h4>- Rohit S.</h4>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Love the custom alerts feature. It keeps me updated without any hassle."</p>
+                        <h4>- Priya M.</h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner" style="display:none;">
+        <div class="spinner"></div>
+    </div>
 
     <footer>
-        <p>Made by Dhruv • For Indian shoppers.</p>
+        <div class="footer-content">
+            <p>Made by Dhruv • For Indian shoppers.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/666666/facebook-new.png" alt="Facebook" /></a>
+                <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/666666/twitter.png" alt="Twitter" /></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/666666/instagram-new.png" alt="Instagram" /></a>
+            </div>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" placeholder="Subscribe to our newsletter" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </footer>
 
     <script src="script.js"></script>
