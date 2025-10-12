@@ -76,7 +76,7 @@ To get a local copy up and running, follow these simple steps.
 
 ---
 
-## 🗺️ Future Roadmap (6th Semester Goals)
+## 🗺️ Future Roadmap
 
 The current version is a fully functional MVP. The next phase of development will focus on automation and expanding the feature set.
 
